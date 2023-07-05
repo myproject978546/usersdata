@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collect Data</title>
+    <style>
+        #container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        form{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-direction: column;
+        }
+        form > input{
+            border: 1px solid black;
+            padding: 4px 8px;
+            outline: none;
+            width: 150%;
+        }
+        input[type="submit"]{
+            background: linear-gradient(to right,#aa44b1,#f4429a);
+            color: white;
+            border: none;
+            
+        }
+        #genders{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <h1>FILL YOUR DETAILS</h1>
+    <form action="http://localhost:6523/login" method="post">
+        <input type="text" name="name" placeholder="Enter Name" autofocus>
+        <input type="text" name="city" placeholder="Enter City">
+        <input type="number" name="age" placeholder="Enter Age">
+        <input type="email" name="email" placeholder="Enter Email">
+        <input type="text" name="password" placeholder="Choose Password">
+        <div id="genders">
+            male : <input type="radio" name="gender" value="male" checked>
+            female : <input type="radio" name="gender" value="female">
+        </div>
+        <input type="submit" value="submit">
+    </form>
+</div>
+</body>
+</html>
