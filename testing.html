@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://localhost:6552/" name="myform" onsubmit="submitform()" method="post">
+        <input type="text" name="fullname">
+        <input type="text" name="phone">
+        <input type="text" name="email">
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        function submitform(){
+            let fullname = document.forms.myform.fullname.value
+            let phone = document.forms.myform.phone.value
+            let email = document.forms.myform.email.value
+            console.log(fullname,phone,email);
+            return false;
+        }
+    </script>
+</body>
+</html>
